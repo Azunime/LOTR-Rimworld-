@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef Name="FencesAFBuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+  <ThingDef ParentName="FencesAFBuildingBase" Name="FencesAFDoorBase" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <blueprintClass>Blueprint_Door</blueprintClass>
+    <category>Building</category>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Door/Door_Blueprint</texPath>
+    </blueprintGraphicData>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <holdsRoof>true</holdsRoof>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+      <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+  
+<!--========================= Elven Fence =============================-->
+  
+  <ThingDef ParentName="FencesAFBuildingBase">
+    <defName>ElvenFence</defName>
+    <label>Elven Fence</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>Decorative, Elven Fence.</description>
+    <graphicData>
+      <texPath>Things/Building/Fences/ElvenFence</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom1</li>
+      </linkFlags>
+    </graphicData>	
+    <uiIconPath>Things/Building/Fences/ElvenFence_Ico</uiIconPath>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Fences/ElvenFence_Blueprint</texPath>
+    </blueprintGraphicData>
+		<costStuffCount>7</costStuffCount>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>250</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.35</fillPercent>
+    <coversFloor>false</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>false</holdsRoof>
+    <designationCategory>Fences</designationCategory>
+    <blockLight>false</blockLight>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+
+  <!--========================= Dwarven Fence  =============================-->  
+  
+  
+  <ThingDef ParentName="FencesAFBuildingBase">
+    <defName>DwarvenFence</defName>
+    <label>Dwarven Fence</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>Dwarven, decorative fence.</description>
+    <graphicData>
+      <texPath>Things/Building/Fences/DwarvenFence</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom1</li>
+      </linkFlags>
+    </graphicData>	
+    <uiIconPath>Things/Building/Fences/DwarvenFence_Ico</uiIconPath>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Fences/DwarvenFence_Blueprint</texPath>
+    </blueprintGraphicData>
+		<costStuffCount>7</costStuffCount>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>250</WorkToBuild>
+			<Flammability>1</Flammability>
+		</statBases>
+    <stuffCategories>
+      <li>Woody</li>
+	  <li>Metallic</li>
+	  <li>Stony</li>
+    </stuffCategories>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>0.35</fillPercent>
+    <coversFloor>false</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>false</holdsRoof>
+    <designationCategory>Fences</designationCategory>
+    <blockLight>false</blockLight>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+  
+  <!---Fence Gate Side-->
+  
+    <ThingDef ParentName="FencesAFDoorBase">
+    <defName>FenceGateB</defName>
+    <label>Fence gate</label>
+    <description>Side view of fences gate</description>
+	<stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+	<fillPercent>0.35</fillPercent>
+    <statBases>
+	  <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>450</WorkToBuild>
+	  <Flammability>1.0</Flammability>
+    </statBases>
+    <holdsRoof>false</holdsRoof>
+    <graphicData>
+      <texPath>Things/Building/Fences/FenceGateB_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <linkFlags>
+        <li>Custom1</li>
+      </linkFlags>
+	  <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>		
+    <uiIconPath>Things/Building/Fences/FenceGateB_Ico</uiIconPath>
+	<blueprintGraphicData>
+      <texPath>Things/Building/Fences/FenceGateB_Blueprint</texPath>
+    </blueprintGraphicData>
+    <costStuffCount>10</costStuffCount>
+	<designationCategory>Fences</designationCategory>
+	<damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+</Defs>

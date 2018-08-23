@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Door Base-->
+  
+  <ThingDef ParentName="HeronBuildingBase" Name="HeronDoorBasee" Abstract="True">
+    <thingClass>Building_Door</thingClass>
+    <blueprintClass>Blueprint_Door</blueprintClass>
+    <category>Building</category>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Door/Door_Blueprint</texPath>
+    </blueprintGraphicData>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+			<isInert>true</isInert>
+			<canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>DoorOpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>DoorClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>DoorOpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>DoorCloseManual</soundDoorCloseManual>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+		</placeWorkers>
+  </ThingDef>
+  
+  <!--Fences Gates-->
+  
+   <!--ElvenFenceGate-->
+  
+  <DoorsExpanded.DoorExpandedDef Name="ElvenFenceGate" ParentName="HeronDoorBasee">
+    <defName>FenceGateElven</defName>
+    <label>Elven Fence Gate</label>
+    <thingClass>DoorsExpanded.Building_DoorExpanded</thingClass>
+    <blueprintClass>Blueprint_Build</blueprintClass>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Fences/ElvenFenceGate_Blueprint</texPath>
+    </blueprintGraphicData>
+    <description>Decorative, elven fence gate. Must be manually opened and closed, which slows people down.</description>
+    <statBases>
+	  <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>850</WorkToBuild>
+    </statBases>
+	<placeWorkers>
+      <li>JecsTools.PlaceWorker_Outline</li>
+    </placeWorkers>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Building/Fences/ElvenFenceGate_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,2)</drawSize>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Fences/ElvenFenceGate_Ico</uiIconPath>
+    <costStuffCount>50</costStuffCount>
+    <designationHotKey>Misc1</designationHotKey>
+    <doorType>Standard</doorType>
+    <designationCategory>Fences</designationCategory>	
+  </DoorsExpanded.DoorExpandedDef>
+  
+   <!--DwarvenFenceGate-->
+  
+  <DoorsExpanded.DoorExpandedDef Name="DwarvenFenceGate" ParentName="HeronDoorBasee">
+    <defName>DwarvenFenceGate</defName>
+    <label>Dwarven Fence Gate</label>
+    <thingClass>DoorsExpanded.Building_DoorExpanded</thingClass>
+    <blueprintClass>Blueprint_Build</blueprintClass>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Fences/DwarvenFenceGate_Blueprint</texPath>
+    </blueprintGraphicData>
+    <description>Decorative, elven fence gate. Must be manually opened and closed, which slows people down.</description>
+    <statBases>
+	  <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>850</WorkToBuild>
+    </statBases>
+	<placeWorkers>
+      <li>JecsTools.PlaceWorker_Outline</li>
+    </placeWorkers>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Building/Fences/DwarvenFenceGate_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,2)</drawSize>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Fences/DwarvenFenceGate_Ico</uiIconPath>
+    <costStuffCount>50</costStuffCount>
+    <designationHotKey>Misc1</designationHotKey>
+    <doorType>Standard</doorType>
+    <designationCategory>Fences</designationCategory>	
+  </DoorsExpanded.DoorExpandedDef>
+  
+   
+  
+  
+  
+</Defs>
+

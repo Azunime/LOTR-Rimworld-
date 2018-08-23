@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<ThingDef ParentName="BuildingBase">
+    <defName>ElvenDais</defName>
+    <label>Elven Rug</label>
+    <graphicData>
+      <texPath>Things/Building/Rugs/TrissDais</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.3,3.3)</drawSize>
+	  <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <size>(3,3)</size>
+	<designationCategory>Fences</designationCategory>
+    <costStuffCount>50</costStuffCount>
+    <rotatable>true</rotatable>
+  </ThingDef>
+  
+  </Defs>
